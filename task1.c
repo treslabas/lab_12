@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 struct ListNode;
 
@@ -65,10 +64,8 @@ struct ListNode* addElement(int value, struct ListNode* root) {
         return l;
     } else {
         struct ListNode *cur = root;
-        assert(cur != NULL);
         while(cur->next != NULL) {
             cur = cur->next;
-            assert(cur != NULL);
         }
         struct ListNode* l = calloc(sizeof (struct ListNode), 1);
         cur->next = l;
